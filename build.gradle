@@ -28,5 +28,5 @@ sonarqube {
         property 'sonar.login', '******'
     }
 }
-
+// Run test
 apply from: 'test.gradle'
