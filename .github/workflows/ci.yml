@@ -1,12 +1,9 @@
 name: Java CI with Gradle
-
 on:
   push:
-    branches: [ main ]
-    
+    branches: [ main ] 
 env:
   DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }} 
-
 jobs:
   build:
 
@@ -40,23 +37,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: code-coverage-report
-        path: build/reports/tests/test
-
-    # - name: SonarQube Scan
-    #   uses: sonarsource/sonarqube-scan-action@master
-    #   env:
-    #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    #     SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-    # - name: SonarQube Quality Gate check
-    #   uses: sonarsource/sonarqube-quality-gate-action@master
-    #   # Force to fail step after specific time
-    #   timeout-minutes: 5
-    #   env:
-    #    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    # - name: Install Datree
-    #   run: curl https://get.datree.io | /bin/bash
-        
-    # - name: Run Datree's policy check
-    #   run: datree test kube.yaml
-
-
+        path: build/reports/tests/test/index
