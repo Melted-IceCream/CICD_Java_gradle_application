@@ -1,7 +1,7 @@
 name: Java CI with Gradle
 on:
   push:
-    branches: [ main, Junsheng] 
+    branches: [ main, junsheng] 
 env:
   DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }} 
 jobs:
