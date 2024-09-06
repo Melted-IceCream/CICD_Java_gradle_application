@@ -28,5 +28,14 @@ sonarqube {
         property 'sonar.login', '******'
     }
 }
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.example.demo.SampleWebApplication'
+    }
+    archiveBaseName.set('my-app')
+    destinationDirectory.set(file('build/libs'))
+}
+
 // Run test
 apply from: 'test.gradle'
